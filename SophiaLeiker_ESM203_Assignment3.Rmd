@@ -86,7 +86,8 @@ ggplot(massbal) +
   geom_line(aes(x=years, y=outs, col='Output')) +
   xlab("Year") + 
   ylab(TeX("Groundwater flux ($10^9$ $m^3$)")) + 
-  theme(legend.title = element_blank())
+  theme(legend.title = element_blank()) +
+  labs(title = "Linear Trend Between the Input and Output Terms for the years 2000 and 2050")
 
 # can do mass balance for each year to see the changes 
 massbal$chnge = massbal$ins - massbal$outs
@@ -142,7 +143,7 @@ ggplot(massbal) +
   xlab("Year") + 
   ylab(TeX("Groundwater stoarge ($10^9$ $m^3$)")) + 
   theme(legend.title = element_blank()) + 
-  ggtitle("Projected groundwater under business as usual with 90% confidence interval")
+  ggtitle("Projected Groundwater Storage Under Business as Usual with 90% CI")
   
 
 ```
